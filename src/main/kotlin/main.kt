@@ -1,7 +1,16 @@
 fun main() {
     println("Hello World. Welcome to Bytebank.")
 
+    val contaMariana = Conta("Mariana", 0)
+    contaMariana.deposita(1000.00)
+    println("Saldo Mariana: ${contaMariana.saldo}")
 
+    val contaJoao = Conta("João Pedro", 1)
+    contaJoao.deposita(2000.00)
+    println("Saldo Joao: ${contaJoao.saldo}")
+
+    contaJoao.transfere(500.00, contaMariana)
+    println("Saldo Joao: ${contaJoao.saldo}, saldo Mariana: ${contaMariana.saldo}")
 }
 
 fun testaLacos() {
